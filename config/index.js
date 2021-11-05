@@ -1,5 +1,5 @@
 module.exports = {
-	__PREFIX__: 'c',
+	__PREFIX__: 'vue',
 	dev: {
 		port: 9527,
 		open: true,
