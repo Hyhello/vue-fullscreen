@@ -4,11 +4,11 @@
 
 The @cestc/c-fullscreen component for vue2, supports single page applications.
 
-Read this document in: [简体中文](https://github.com/Hyhello/geo-cli/blob/master/README.zh_CN.md).
+Read this document in: [简体中文](https://github.com/Hyhello/vue-fullscreen/blob/master/README.zh_CN.md).
 
 ## Examples
 
-[demo](https://whgitlab2.cestc.cn/yeshengqiang/fullscreen/blob/master/index.html)
+[demo](https://github.com/Hyhello/vue-fullscreen/blob/master/index.html)
 
 ## Use Setup
 
