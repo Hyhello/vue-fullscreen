@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- import CSS -->
+		<style>
+			html, body, #app {
+				width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+            <c-fullscreen :bind="bindFun" @change="change" :native-options="options">
+                <button>全屏切换</button>
+            </c-fullscreen>
+        </div>
+	</body>
+	<!-- import Vue before Element -->
+	<script src="./node_modules/vue/dist/vue.js"></script>
+
+	<!-- import JavaScript -->
+	<script src="./lib/index.js"></script>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: function() {
+				return {
+                    options: {
+                        navigationUI: 'hide'
+                    }
+				};
+			},
+            methods: {
+                bindFun () {
+                    return '#app';
+                },
+                change (val) {
+                    console.log('状态:', val ? '全屏' : '非全屏');
+                }
+            }
+		});
+	</script>
+</html>
