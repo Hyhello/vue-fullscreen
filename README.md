@@ -1,8 +1,8 @@
 # Quick start
 
-## @cestc/c-fullscreen
+## @hyhello/vue-fullscreen
 
-The @cestc/c-fullscreen component for vue2, supports single page applications.
+The @hyhello/vue-fullscreen component for vue2, supports single page applications.
 
 Read this document in: [简体中文](https://github.com/Hyhello/vue-fullscreen/blob/master/README.zh_CN.md).
 
@@ -12,10 +12,10 @@ Read this document in: [简体中文](https://github.com/Hyhello/vue-fullscreen/
 
 ## Use Setup
 
-### install @cestc/c-fullscreen
+### install @hyhello/vue-fullscreen
 
 ```javascript
-npm install @cestc/c-fullscreen --save
+npm install @hyhello/vue-fullscreen --save
 ```
 
 ### Vue mount
@@ -23,13 +23,13 @@ npm install @cestc/c-fullscreen --save
 ```vuejs
 // global use
 import Vue from 'vue';
-import CFullscreen from '@cestc/c-fullscreen';
+import vueFullscreen from '@hyhello/vue-fullscreen';
 
 // use  @params：支持 options 全局配置
-Vue.use(CFullscreen, [options]);
+Vue.use(vueFullscreen, [options]);
 
 // or Local use
-import { Fullscreen } from '@cestc/c-fullscreen';
+import { Fullscreen } from '@hyhello/vue-fullscreen';
 
 export default {
     components: { Fullscreen }
@@ -40,15 +40,15 @@ export default {
 
 ```html
 <template>
-    <c-fullscreen bind="bindEl">
+    <vue-fullscreen bind="bindEl">
         <button>fullscreen toggle</button>
-    </c-fullscreen>
+    </vue-fullscreen>
 </template>
 <script>
-    import { Fullscreen as CFullscreen } from '@cestc/c-fullscreen';
+    import { Fullscreen as vueFullscreen } from '@hyhello/vue-fullscreen';
 
     export default {
-        components: { CFullscreen },
+        components: { vueFullscreen },
         data () {
             return {
                 bindEl: document.body

@@ -1,8 +1,8 @@
 # 快速开始
 
-## @cestc/c-fullscreen
+## @hyhello/vue-fullscreen
 
-@cestc/c-fullscreen 适用于Vue2的全屏组件，支持单页应用。
+@hyhello/vue-fullscreen 适用于Vue2的全屏组件，支持单页应用。
 
 ## Examples
 
@@ -10,10 +10,10 @@
 
 ## Use Setup
 
-### install @cestc/c-fullscreen
+### install @hyhello/vue-fullscreen
 
 ```javascript
-npm install @cestc/c-fullscreen --save
+npm install @hyhello/vue-fullscreen --save
 ```
 
 ### Vue mount
@@ -21,13 +21,13 @@ npm install @cestc/c-fullscreen --save
 ```vuejs
 // global use
 import Vue from 'vue';
-import CFullscreen from '@cestc/c-fullscreen';
+import CFullscreen from '@hyhello/vue-fullscreen';
 
 // use  @params：支持 options 全局配置
 Vue.use(CFullscreen, [options]);
 
 // or Local use
-import { Fullscreen } from '@cestc/c-fullscreen';
+import { Fullscreen } from '@hyhello/vue-fullscreen';
 
 export default {
     components: { Fullscreen }
@@ -38,12 +38,12 @@ export default {
 
 ```html
 <template>
-    <c-fullscreen bind="bindEl">
+    <vue-fullscreen bind="bindEl">
         <button>全屏切换</button>
-    </c-fullscreen>
+    </vue-fullscreen>
 </template>
 <script>
-    import { Fullscreen as CFullscreen } from '@cestc/c-fullscreen';
+    import { Fullscreen as CFullscreen } from '@hyhello/vue-fullscreen';
 
     export default {
         components: { CFullscreen },
