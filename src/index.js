@@ -27,3 +27,5 @@ export default {
 	install,
 	...components
 };
+
+export { Fullscreen };
