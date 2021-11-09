@@ -38,19 +38,29 @@ export default {
 
 ```html
 <template>
-    <vue-fullscreen bind="bindEl">
-        <button>全屏切换</button>
-    </vue-fullscreen>
+    <div>
+        <div class="bindEl">全屏文档</div>
+        <vue-fullscreen bind=".bindEl">
+            <button>fullscreen toggle</button>
+        </vue-fullscreen>
+    </div>
 </template>
 <script>
     import { Fullscreen as CFullscreen } from '@hyhello/vue-fullscreen';
 
     export default {
-        components: { CFullscreen },
-        data () {
+        components: { vueFullscreen },
+        data: function() {
             return {
-                bindEl: document.body
+                options: {
+                    navigationUI: 'hide'
+                }
             };
+        },
+        methods: {
+            change (val) {
+                console.log('状态:', val ? '全屏' : '非全屏');
+            }
         }
     }
 </script>

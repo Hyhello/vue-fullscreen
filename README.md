@@ -25,7 +25,7 @@ npm install @hyhello/vue-fullscreen --save
 import Vue from 'vue';
 import vueFullscreen from '@hyhello/vue-fullscreen';
 
-// use  @params：支持 options 全局配置
+// use  @params：global configuration
 Vue.use(vueFullscreen, [options]);
 
 // or Local use
@@ -40,19 +40,29 @@ export default {
 
 ```html
 <template>
-    <vue-fullscreen bind="bindEl">
-        <button>fullscreen toggle</button>
-    </vue-fullscreen>
+    <div>
+        <div class="bindEl">content</div>
+        <vue-fullscreen bind=".bindEl" @change="change" :native-options="options">
+            <button>fullscreen toggle</button>
+        </vue-fullscreen>
+    </div>
 </template>
 <script>
     import { Fullscreen as vueFullscreen } from '@hyhello/vue-fullscreen';
 
     export default {
         components: { vueFullscreen },
-        data () {
+        data: function() {
             return {
-                bindEl: document.body
+                options: {
+                    navigationUI: 'hide'
+                }
             };
+        },
+        methods: {
+            change (val) {
+                console.log('status:', val ? 'fullscreen' : 'no fullscreen');
+            }
         }
     }
 </script>
