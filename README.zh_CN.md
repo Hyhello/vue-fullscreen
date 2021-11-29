@@ -2,11 +2,11 @@
 
 ## @hyhello/vue-fullscreen
 
-@hyhello/vue-fullscreen 适用于Vue2的全屏组件，支持单页应用。
+@hyhello/vue-fullscreen 适用于 Vue2 的全屏组件，支持单页应用。
 
 ## Examples
 
-[demo](https://whgitlab2.cestc.cn/yeshengqiang/fullscreen/blob/master/index.html)
+[codepen.io](https://codepen.io/vue-book/pen/oNGvKGm)
 
 ## Use Setup
 
@@ -38,31 +38,31 @@ export default {
 
 ```html
 <template>
-    <div>
-        <div class="bindEl">全屏文档</div>
-        <vue-fullscreen bind=".bindEl">
-            <button>fullscreen toggle</button>
-        </vue-fullscreen>
-    </div>
+	<div>
+		<div class="bindEl">全屏文档</div>
+		<vue-fullscreen bind=".bindEl">
+			<button>fullscreen toggle</button>
+		</vue-fullscreen>
+	</div>
 </template>
 <script>
-    import { Fullscreen as CFullscreen } from '@hyhello/vue-fullscreen';
+	import { Fullscreen as CFullscreen } from '@hyhello/vue-fullscreen';
 
-    export default {
-        components: { vueFullscreen },
-        data: function() {
-            return {
-                options: {
-                    navigationUI: 'hide'
-                }
-            };
-        },
-        methods: {
-            change (val) {
-                console.log('状态:', val ? '全屏' : '非全屏');
-            }
-        }
-    }
+	export default {
+		components: { vueFullscreen },
+		data: function () {
+			return {
+				options: {
+					navigationUI: 'hide'
+				}
+			};
+		},
+		methods: {
+			change(val) {
+				console.log('状态:', val ? '全屏' : '非全屏');
+			}
+		}
+	};
 </script>
 ```
 
@@ -70,16 +70,16 @@ export default {
 
 ### Attributes
 
-| 参数              | 说明                 | 类型            | 可选值 | 默认值 |
-| ----------------- | ------------------- | --------------- | ------ | ------ |
-| bind              | 绑定需要放大的元素    | string / HTMLElement / function    | —     |  document.documentElement  |
-| trigger              | 触发的methods        | string          | click / dblclick | click |
-| nativeOptions     | 控制向全屏模式过渡的行为的对象，[参考](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen)           | object  | —    | {}     |
-| keyboard          | 是否启用键盘控制(F11) | boolean  | —    | true     |
-| beforeChange      | 改变之前触发          | function  | —   | —    |
+| 参数          | 说明                                                                                                               | 类型                            | 可选值           | 默认值                   |
+| ------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------- | ---------------- | ------------------------ |
+| bind          | 绑定需要放大的元素                                                                                                 | string / HTMLElement / function | —                | document.documentElement |
+| trigger       | 触发的 methods                                                                                                     | string                          | click / dblclick | click                    |
+| nativeOptions | 控制向全屏模式过渡的行为的对象，[参考](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen) | object                          | —                | {}                       |
+| keyboard      | 是否启用键盘控制(F11)                                                                                              | boolean                         | —                | true                     |
+| beforeChange  | 改变之前触发                                                                                                       | function                        | —                | —                        |
 
 ### Events
 
-| 事件名 | 说明               | 回调参数 |
-| ------ | ------------------ | -------- |
-| change  | 监听当前是否全屏 | 全屏状态（boolean） |
+| 事件名 | 说明             | 回调参数            |
+| ------ | ---------------- | ------------------- |
+| change | 监听当前是否全屏 | 全屏状态（boolean） |

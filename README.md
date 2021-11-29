@@ -8,7 +8,7 @@ Read this document in: [简体中文](https://github.com/Hyhello/vue-fullscreen/
 
 ## Examples
 
-[demo](https://github.com/Hyhello/vue-fullscreen/blob/master/index.html)
+[codepen.io](https://codepen.io/vue-book/pen/oNGvKGm)
 
 ## Use Setup
 
@@ -40,31 +40,31 @@ export default {
 
 ```html
 <template>
-    <div>
-        <div class="bindEl">content</div>
-        <vue-fullscreen bind=".bindEl" @change="change" :native-options="options">
-            <button>fullscreen toggle</button>
-        </vue-fullscreen>
-    </div>
+	<div>
+		<div class="bindEl">content</div>
+		<vue-fullscreen bind=".bindEl" @change="change" :native-options="options">
+			<button>fullscreen toggle</button>
+		</vue-fullscreen>
+	</div>
 </template>
 <script>
-    import { Fullscreen as vueFullscreen } from '@hyhello/vue-fullscreen';
+	import { Fullscreen as vueFullscreen } from '@hyhello/vue-fullscreen';
 
-    export default {
-        components: { vueFullscreen },
-        data: function() {
-            return {
-                options: {
-                    navigationUI: 'hide'
-                }
-            };
-        },
-        methods: {
-            change (val) {
-                console.log('status:', val ? 'fullscreen' : 'no fullscreen');
-            }
-        }
-    }
+	export default {
+		components: { vueFullscreen },
+		data: function () {
+			return {
+				options: {
+					navigationUI: 'hide'
+				}
+			};
+		},
+		methods: {
+			change(val) {
+				console.log('status:', val ? 'fullscreen' : 'no fullscreen');
+			}
+		}
+	};
 </script>
 ```
 
@@ -72,16 +72,16 @@ export default {
 
 ### Attributes
 
-| params              | explain                 | type            | Optional value | Default value |
-| ----------------- | ------------------- | --------------- | ------ | ------ |
-| bind              | Bind elements that need to be enlarged    | string / HTMLElement / function    | —     |  document.documentElement  |
-| trigger              | Triggered methods        | string          | click / dblclick | click |
-| nativeOptions     | An object that controls the behavior of the transition to full screen mode，[Api](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen)           | object  | —    | {}     |
-| keyboard          | Enable keyboard control(F11) | boolean  | —    | true     |
-| beforeChange      | Trigger before change          | function  | —   | —    |
+| params        | explain                                                                                                                                                       | type                            | Optional value   | Default value            |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ---------------- | ------------------------ |
+| bind          | Bind elements that need to be enlarged                                                                                                                        | string / HTMLElement / function | —                | document.documentElement |
+| trigger       | Triggered methods                                                                                                                                             | string                          | click / dblclick | click                    |
+| nativeOptions | An object that controls the behavior of the transition to full screen mode，[Api](https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen) | object                          | —                | {}                       |
+| keyboard      | Enable keyboard control(F11)                                                                                                                                  | boolean                         | —                | true                     |
+| beforeChange  | Trigger before change                                                                                                                                         | function                        | —                | —                        |
 
 ### Events
 
-| eventName | explain               | Callback Arguments |
-| ------ | ------------------ | -------- |
-| change  | Monitor whether the current screen is full | status（boolean） |
+| eventName | explain                                    | Callback Arguments |
+| --------- | ------------------------------------------ | ------------------ |
+| change    | Monitor whether the current screen is full | status（boolean）  |
