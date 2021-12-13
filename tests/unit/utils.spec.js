@@ -1,4 +1,4 @@
-import { oneOf, isElement, _defineProperty, _extend } from '@/core/utils';
+import { oneOf, isElement, _defineProperty, _extend } from '@/utils';
 
 test('oneOf', () => {
 	expect(oneOf('a', ['a', 'b'])).toBeTruthy();

@@ -22,6 +22,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 	install(window.Vue);
 }
 
+let b;
+
 export default {
 	v: '__VERSION__',
 	install,

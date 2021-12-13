@@ -6,7 +6,6 @@ const eslint = require('@rollup/plugin-eslint');
 const { babel } = require('@rollup/plugin-babel');
 const replace = require('@rollup/plugin-replace');
 const commonjs = require('@rollup/plugin-commonjs');
-// const typescript = require('@rollup/plugin-typescript');
 const { nodeResolve } = require('@rollup/plugin-node-resolve');
 
 const aliass = require('./alias');
@@ -21,11 +20,7 @@ const baseConfig = {
     input: 'src/index.js',
     external: ['vue'],
     plugins: [
-        alias(Object.assign({}, aliass)),
-        eslint({
-			formatter: require('eslint-friendly-formatter'),
-			include: ['src/**/*.{js|jsx|vue}', 'packages/**/*.{js|jsx|vue}']
-		}),
+        alias({...aliass}),
         nodeResolve({
             extensions: aliass.resolve
         }),
@@ -34,11 +29,15 @@ const baseConfig = {
         json({
             exclude: ['node_modules/**']
         }),
-        babel({ babelHelpers: 'runtime' }),
+        eslint({
+			formatter: require('eslint-friendly-formatter'),
+			include: ['src/**/*.js', 'packages/**/*.{js,jsx,vue}'],
+            exclude: 'node_modules/**'
+		}),
         vue({
             target: 'browser'
         }),
-        // typescript(),
+        babel({ babelHelpers: 'runtime' }),
 		replace({
             preventAssignment: true,
             values: {
