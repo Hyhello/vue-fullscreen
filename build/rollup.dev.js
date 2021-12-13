@@ -39,7 +39,7 @@ module.exports = new Promise((resolve, reject) => {
                     port: port
                 }),
                 livereload({
-                    watch: ['lib', 'examples', 'index.html'] //监听文件夹;
+                    watch: ['lib'] //监听文件夹;
                 })
             );
             resolve(rollupConfig);
