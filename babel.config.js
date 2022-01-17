@@ -11,7 +11,10 @@ module.exports = {
 		],
 		['@vue/babel-preset-jsx']
 	],
-	plugins: ['@babel/plugin-transform-runtime', ['import', { libraryName: 'cEditor', style: true }]],
+	plugins: [
+		'@babel/plugin-transform-runtime',
+		['import', { libraryName: '@hyhello/utils', libraryDirectory: 'lib', camel2DashComponentName: false }]
+	],
 	env: {
 		test: {
 			plugins: ['@babel/plugin-transform-modules-commonjs']

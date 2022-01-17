@@ -4,7 +4,7 @@
  * 描述：
  */
 
-import { oneOf } from '@/utils/utils';
+import { oneOf } from '@hyhello/utils';
 
 const typeList = ['dblclick', 'click'];
 
