@@ -1,6 +1,6 @@
 {
   "name": "@hyhello/vue-fullscreen",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "A fullscreen components for Vue2.0",
   "keywords": [
     "fullscreen",
@@ -133,6 +133,7 @@
     "vue": "^2.6.11"
   },
   "dependencies": {
+    "@hyhello/utils": "^1.2.0",
     "screenfull": "5.1.0",
     "vue": "^2.6.11"
   },

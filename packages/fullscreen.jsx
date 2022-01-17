@@ -4,9 +4,9 @@
  * 描述：fullscreen
  */
 import screenfull from 'screenfull';
+import { isFunction, isPromise, isElement } from '@hyhello/utils';
 import { warn } from '@/utils/debug';
 import props from './props';
-import { isFunction, isPromise, isElement } from '@/utils/utils';
 
 export default {
 	name: 'Fullscreen',
